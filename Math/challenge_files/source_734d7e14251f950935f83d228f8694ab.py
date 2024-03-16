@@ -12,7 +12,6 @@ def encrypt_flag(flag):
     for b in plaintext:
         e = randint(1, p)
         n = pow(a, e, p)
-        print((pow(-n,(p-1)//2,p)))
         if b == '1':
             ciphertext.append(n)
         else:
@@ -20,6 +19,4 @@ def encrypt_flag(flag):
             ciphertext.append(n)
     return ciphertext
 
-super_list = [bin(i)[2:] for i in FLAG]
-print([chr(int(binary, 2)) for binary in super_list])
 print(encrypt_flag(FLAG))
